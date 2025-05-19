@@ -1,4 +1,5 @@
-[![Watch the video](https://img.youtube.com/vi/naRUyNgxMqc/0.jpg)](https://www.youtube.com/watch?v=naRUyNgxMqc)
+参考動画: qwerty配列と大西配列を共存させる【AutoHotkey】
+[![qwerty配列と大西配列を共存させる【AutoHotkey】](https://img.youtube.com/vi/naRUyNgxMqc/0.jpg)](https://www.youtube.com/watch?v=naRUyNgxMqc)
 
 ## ダウンロード方法、起動方法
 
