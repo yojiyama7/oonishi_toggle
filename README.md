@@ -13,3 +13,13 @@
 ## 使用方法
 
 - oonishi_toggle.ahkの上部にコメントを書いているので参照してほしい
+
+## PC起動時に有効化
+
+- .exeファイル自体 or .exeファイルのショートカットをスタートアップフォルダに追加
+  - スタートアップフォルダ: Win + R -> `shell:startup` で開くフォルダ
+    - 例: `C:\Users\<#username#>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+
+## 注意
+
+- 安全性、安定性を保証できないです
