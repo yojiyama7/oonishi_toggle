@@ -1,16 +1,24 @@
 ﻿;=== qwerty配列と大西配列を共存させるためのscript
 ;=== 起動時qwerty配列モードになる
-;=== CapsLockの状態のトグルはできない
-;=== CapsLock + Enter で配列モードをトグルする
-;=== CapsLockをpressした時CapsLockが有効になる(ライトが光る)なら大西配列モードになっている
-;=== (将来性としてtoggleでない方がいいかも？)
+;=== CapsLockの状態のトグルはできない(現在の配列モードの表示の為に使用する)
+;=== CapsLockをholdした時CapsLockが有効になるなら大西配列モードになっている
+;===   (CapsLockの状態がONのときライトが光るようなキーボードを想定)
+;===
+;=== 行える操作
+;=== CapsLock hold: 押している間、CapsLockの状態が配列モードに対応する
+;===   qwerty配列が有効な時: CapsLockの状態がOFFになる(何もキーを押さないのと同じ)
+;===   大西配列が有効な時: CapsLockの状態がONになる(CapsLock状態を確認できるキーボードだとそれが表示になる)
+;=== CapsLock を押しながら Enter: 配列モードをtoggleする
+;===   qwerty配列が有効な時: Enterを押した瞬間大西配列が有効になる
+;===   大西配列が有効な時: Enterを押した瞬間qwerty配列が有効になる
 
 #NoEnv
 #SingleInstance Force
 #UseHook On  ; 低レベルフックを強制
 #InstallKeybdHook  ; 明示的にキーボードフックを有効にする
 
-isDiffLayout := False ; 大西配列モードかどうか
+isDiffLayout := False ; 大西配列モードかどうか Trueにすると起動時大西配列になる
+                      ; 変数名が示すように一応配列を別のものにする仕組みなので大西配列でなくても流用できる部分はあるかも
 
 SetCapsLockState, AlwaysOff
 *CapsLock::
@@ -69,4 +77,4 @@ Return
   *,::Send {Blind}{m}
   *.::Send {Blind}{j}
   */::Send {Blind}{b}
-#If  ; 条件解除
+#If ; end
